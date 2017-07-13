@@ -1,0 +1,34 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+    }
+}
+
+group 'spring-boot-basics'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'war'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile("junit:junit")// what can be this repo's purpose ?
+    compile("org.springframework.boot:spring-boot-starter-actuator")// what can be this repo's purpose ?
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+//    compile("org.springframework.boot:spring-boot-starter-security")// what can be this repo's purpose ?
+    compile("org.springframework.boot:spring-boot-starter-test")// what can be this repo's purpose ?
+    compile("org.springframework.boot:spring-boot-starter-web")// what can be this repo's purpose ?
+    compile("org.springframework.boot:spring-boot-starter-jetty")// what can be this repo's purpose ?
+//    runtime('mysql:mysql-connector-java:5.1.6') // what can be this repo's purpose ?
+}
